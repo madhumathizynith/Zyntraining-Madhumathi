@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "OnPrem BCDev",
+      "type": "al",
+      "request": "launch",
+      "environmentType": "OnPrem",
+      "server": "http://bcdev",
+      "serverInstance": "BC",
+      "port": 7049,
+      "authentication": "UserPassword",
+      "tenant": "default",
+      "startupObjectType": "Page",
+      "startupObjectId": 22,
+      "usePublicURLFromServer": false,
+      "schemaUpdateMode": "ForceSync",
+      "forceUpgrade": true
+    }
+  ]
+}
