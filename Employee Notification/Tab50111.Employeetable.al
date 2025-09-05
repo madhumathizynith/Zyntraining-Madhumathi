@@ -4,7 +4,7 @@ table 50111 "Employee info Table"
 
     fields
     {
-        field(1; "Employee ID"; Code[10])
+        field(1; "Employee ID"; Code[20])
         {
             Caption = 'Employee ID';
         }
