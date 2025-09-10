@@ -9,6 +9,5 @@ codeunit 50168 "Subscription Job"
         created := JobBill.Billing();
     end;
 
-    var
-        myInt: Integer;
+
 }

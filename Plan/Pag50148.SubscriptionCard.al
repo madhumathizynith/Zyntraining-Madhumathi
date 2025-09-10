@@ -43,6 +43,14 @@ page 50148 "Subscription Card"
                 {
                     ApplicationArea = All;
                 }
+                field("Remainder Sent"; Rec."Remainder Sent")
+                {
+                    ApplicationArea = All;
+                }
+                field("Next Renewal Date"; Rec."Next Renewal Date")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }

@@ -31,6 +31,7 @@ table 50121 "Customer Subscription"
                 if "Start Date" <> 0D then begin
                     "Next Bill date" := CalcDate('+1M', "Start Date");
                     "End Date" := CalcDate('+1Y', "Start Date") - 1;
+                    "Next Renewal Date" := "End Date" + 1;
                 end else if "Start Date" = 0D then begin
                     Message('Please enter the start date');
                 end;
@@ -50,6 +51,17 @@ table 50121 "Customer Subscription"
         field(7; "Subscription Status"; Enum "Subscription Status")
         {
             Caption = 'Subscription Status';
+        }
+        field(8; "Next Renewal Date"; Date)
+        {
+            Caption = 'Next Renewal Date';
+
+
+        }
+        field(9; "Remainder Sent"; Boolean)
+        {
+            Caption = 'Remainder Sent';
+
         }
 
 
