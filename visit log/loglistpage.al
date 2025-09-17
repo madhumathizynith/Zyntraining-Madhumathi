@@ -31,3 +31,4 @@ page 50122 "Visit Log List"
     end;
 
 }
+

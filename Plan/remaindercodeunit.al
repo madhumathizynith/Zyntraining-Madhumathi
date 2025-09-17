@@ -36,11 +36,23 @@ codeunit 50199 "Subscription Reminder Handler"
 
 pageextension 50134 RoleCenterExtension extends "O365 Activities"
 {
-    trigger OnAfterGetRecord()
-    var
-        ReminderHandler: Codeunit "Subscription Reminder Handler";
-    begin
-        ReminderHandler.SendSubscriptionReminders();
-        CurrPage.Update(false); // Optional UI refresh
-    end;
+    actions
+    {
+        addlast(Processing)
+        {
+            action("Check Subscription Reminders")
+            {
+                ApplicationArea = All;
+                Caption = 'Check Subscription Reminders';
+
+
+                trigger OnAction()
+                var
+                    ReminderHandler: Codeunit "Subscription Reminder Handler";
+                begin
+                    ReminderHandler.SendSubscriptionReminders();
+                end;
+            }
+        }
+    }
 }
